@@ -49,14 +49,20 @@ def generate_post():
     # Search for an article on the topic
     link = search_article(topic)
 
-    prompt = profile + "\n\nBased on this profile, write a LinkedIn post that Emily might write about " + topic + ", that could inspire, educate, or inform others in her network. Link to an article: " + link
+    prompt = profile + "\n\nBased on this profile, write a LinkedIn post that Emily might write about " + topic + ", that could inspire, educate, or inform others in her network."
     response = openai.Completion.create(
         engine="text-davinci-002",
         prompt=prompt,
         temperature=0.5,
         max_tokens=100
     )
-    return response.choices[0].text.strip()
+
+    post = response.choices[0].text.strip()
+    # Append the article link to the post
+    post += f"\n\nCheck out this article for more information: {link}"
+    
+    return post
+
 
 # Function to write message to a text file
 def write_message():
