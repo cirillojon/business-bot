@@ -4,7 +4,7 @@ import time
 import itertools
 
 # Initialize OpenAI's GPT-4 with your API key
-openai.api_key = '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'
+openai.api_key = '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'
 
 # Topics for posts
 topics = ["sustainable business practices", "leadership", "entrepreneurship", "financial analysis", 
