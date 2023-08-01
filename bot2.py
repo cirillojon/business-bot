@@ -39,9 +39,7 @@ def search_article(query):
 
 # Function to generate posts
 def generate_post():
-    profile = """
-    Emily Robertson is a zealous individual with a wide array of interests...
-    """ # Your profile string here
+    profile = """""" 
 
     # Get next topic from the cycle
     topic = next(topics_cycle)
@@ -49,7 +47,7 @@ def generate_post():
     # Search for an article on the topic
     link = search_article(topic)
 
-    prompt = profile + "\n\nBased on this profile, write a LinkedIn post that Emily might write about " + topic + ", that could inspire, educate, or inform others in her network."
+    prompt = profile + "\n\nBased on this profile, write a LinkedIn post that they might write about " + topic + ", that could inspire, educate, or inform others in their network."
     response = openai.Completion.create(
         engine="text-davinci-002",
         prompt=prompt,

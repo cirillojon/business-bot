@@ -22,7 +22,7 @@ def generate_post():
      # Get next topic from the cycle
     topic = next(topics_cycle)
 
-    prompt = profile + "\n\nBased on this profile, write a LinkedIn post that Emily might write about " + topic + ", that could inspire, educate, or inform others in their network."
+    prompt = profile + "\n\nBased on this profile, write a LinkedIn post that they might write about " + topic + ", that could inspire, educate, or inform others in their network."
     response = openai.Completion.create(
         engine="text-davinci-002",
         prompt=prompt,
