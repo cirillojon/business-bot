@@ -6,7 +6,7 @@ import requests
 from bs4 import BeautifulSoup
 
 # Initialize OpenAI's GPT-4 with your API key
-openai.api_key = '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'
+openai.api_key = 'sk-'
 
 # Topics for posts
 topics = ["sustainable business practices", "leadership", "entrepreneurship", "financial analysis", 

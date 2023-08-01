@@ -3,8 +3,7 @@ import schedule
 import time
 import itertools
 
-# Initialize OpenAI's GPT-4 with your API key
-openai.api_key = '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'
+openai.api_key = 'sk-'
 
 # Topics for posts
 topics = ["sustainable business practices", "leadership", "entrepreneurship", "financial analysis", 
@@ -23,7 +22,6 @@ def generate_post():
      # Get next topic from the cycle
     topic = next(topics_cycle)
 
-    prompt = profile + "\n\nBased on this profile, write a LinkedIn post that Emily might write about " + topic + ", that could inspire, educate, or inform others in her network."
     response = openai.Completion.create(
         engine="text-davinci-002",
         prompt=prompt,
